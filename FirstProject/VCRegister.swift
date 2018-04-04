@@ -9,7 +9,13 @@
 import UIKit
 
 class VCRegister: UIViewController {
+    
+    @IBOutlet var txtEmail:UITextField?
+    @IBOutlet var txtUser:UITextField?
+    @IBOutlet var txtPassword:UITextField?
+    @IBOutlet var txtRePassword:UITextField?
      @IBOutlet var btnAceptar:UIButton?
+    @IBOutlet var btnCancelar:UIButton?
     override func viewDidLoad() {
         super.viewDidLoad()
        
