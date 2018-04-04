@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D0C2FC12073ACDF004A9586 /* VCRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C2FC02073ACDF004A9586 /* VCRegister.swift */; };
+		4D6045FD207522FF0070F2A7 /* VCPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6045FC207522FF0070F2A7 /* VCPrincipal.swift */; };
 		4DE9E9AA2063B74B00DF4D96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE9E9A92063B74B00DF4D96 /* AppDelegate.swift */; };
 		4DE9E9AC2063B74B00DF4D96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE9E9AB2063B74B00DF4D96 /* ViewController.swift */; };
 		4DE9E9AF2063B74C00DF4D96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE9E9AD2063B74C00DF4D96 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		4D0C2FC02073ACDF004A9586 /* VCRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegister.swift; sourceTree = "<group>"; };
+		4D6045FC207522FF0070F2A7 /* VCPrincipal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPrincipal.swift; sourceTree = "<group>"; };
 		4DE9E9A62063B74B00DF4D96 /* FirstProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE9E9A92063B74B00DF4D96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DE9E9AB2063B74B00DF4D96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				4DE9E9B82063B74C00DF4D96 /* Info.plist */,
 				4DE9E9B02063B74C00DF4D96 /* FirstProject.xcdatamodeld */,
 				4D0C2FC02073ACDF004A9586 /* VCRegister.swift */,
+				4D6045FC207522FF0070F2A7 /* VCPrincipal.swift */,
 			);
 			path = FirstProject;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			files = (
 				4DE9E9AC2063B74B00DF4D96 /* ViewController.swift in Sources */,
 				4D0C2FC12073ACDF004A9586 /* VCRegister.swift in Sources */,
+				4D6045FD207522FF0070F2A7 /* VCPrincipal.swift in Sources */,
 				4DE9E9B22063B74C00DF4D96 /* FirstProject.xcdatamodeld in Sources */,
 				4DE9E9AA2063B74B00DF4D96 /* AppDelegate.swift in Sources */,
 			);
