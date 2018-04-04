@@ -10,8 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet var txtUser:UITextField?
+    @IBOutlet var txtPassword:UITextField?
+    @IBOutlet var btn:UIButton?
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad();
+       
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -19,7 +26,17 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @IBAction func clickLoginEvent(){
+        print("Hola " + (txtUser?.text)!)
+        
+        if txtUser?.text == "nacho" && txtPassword?.text == "galan" {
+            self.performSegue(withIdentifier: "transitionLogin", sender: self)
+        }
+        
+    }
+    
+    
+    
 }
 
