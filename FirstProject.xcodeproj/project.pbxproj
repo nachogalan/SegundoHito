@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4D0C2FC12073ACDF004A9586 /* VCRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C2FC02073ACDF004A9586 /* VCRegister.swift */; };
+		4D108C312076404500143415 /* MiCelda1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D108C302076404500143415 /* MiCelda1.swift */; };
+		4D108C35207648A700143415 /* VCCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D108C34207648A700143415 /* VCCollectionViewController.swift */; };
+		4D108C3920764F7100143415 /* MiCelda2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D108C3820764F7100143415 /* MiCelda2.swift */; };
 		4D6045FD207522FF0070F2A7 /* VCPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6045FC207522FF0070F2A7 /* VCPrincipal.swift */; };
 		4DE9E9AA2063B74B00DF4D96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE9E9A92063B74B00DF4D96 /* AppDelegate.swift */; };
 		4DE9E9AC2063B74B00DF4D96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE9E9AB2063B74B00DF4D96 /* ViewController.swift */; };
@@ -20,6 +23,9 @@
 
 /* Begin PBXFileReference section */
 		4D0C2FC02073ACDF004A9586 /* VCRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegister.swift; sourceTree = "<group>"; };
+		4D108C302076404500143415 /* MiCelda1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiCelda1.swift; sourceTree = "<group>"; };
+		4D108C34207648A700143415 /* VCCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCollectionViewController.swift; sourceTree = "<group>"; };
+		4D108C3820764F7100143415 /* MiCelda2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiCelda2.swift; sourceTree = "<group>"; };
 		4D6045FC207522FF0070F2A7 /* VCPrincipal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPrincipal.swift; sourceTree = "<group>"; };
 		4DE9E9A62063B74B00DF4D96 /* FirstProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE9E9A92063B74B00DF4D96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +81,9 @@
 				4DE9E9B02063B74C00DF4D96 /* FirstProject.xcdatamodeld */,
 				4D0C2FC02073ACDF004A9586 /* VCRegister.swift */,
 				4D6045FC207522FF0070F2A7 /* VCPrincipal.swift */,
+				4D108C302076404500143415 /* MiCelda1.swift */,
+				4D108C34207648A700143415 /* VCCollectionViewController.swift */,
+				4D108C3820764F7100143415 /* MiCelda2.swift */,
 			);
 			path = FirstProject;
 			sourceTree = "<group>";
@@ -172,9 +181,12 @@
 			files = (
 				4DE9E9AC2063B74B00DF4D96 /* ViewController.swift in Sources */,
 				4D0C2FC12073ACDF004A9586 /* VCRegister.swift in Sources */,
+				4D108C3920764F7100143415 /* MiCelda2.swift in Sources */,
 				4D6045FD207522FF0070F2A7 /* VCPrincipal.swift in Sources */,
+				4D108C35207648A700143415 /* VCCollectionViewController.swift in Sources */,
 				4DE9E9B22063B74C00DF4D96 /* FirstProject.xcdatamodeld in Sources */,
 				4DE9E9AA2063B74B00DF4D96 /* AppDelegate.swift in Sources */,
+				4D108C312076404500143415 /* MiCelda1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

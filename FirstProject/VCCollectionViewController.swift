@@ -1,19 +1,17 @@
 //
-//  VCPrincipal.swift
+//  VCCollectionViewController.swift
 //  FirstProject
 //
-//  Created by IGNACIO GALAN DE PINA on 4/4/18.
+//  Created by IGNACIO GALAN DE PINA on 5/4/18.
 //  Copyright © 2018 IGNACIO GALAN DE PINA. All rights reserved.
 //
 
 import UIKit
 
-class VCPrincipal: UIViewController, UITableViewDelegate, UITableViewDataSource {
-  
+class VCCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+   
     
-    @IBOutlet var tbTablaChamp:UITableView?
-    
-    
+    @IBOutlet var colPrincipal:UICollectionView?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,30 +22,26 @@ class VCPrincipal: UIViewController, UITableViewDelegate, UITableViewDataSource 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+       return 5
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celda = tableView.dequeueReusableCell(withIdentifier: "IDmiCelda") as! MiCelda1
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let celda = collectionView.dequeueReusableCell(withReuseIdentifier: "IDmiCelda1", for: indexPath) as! MiCelda2
         if indexPath.row==0 {
-            celda.lblTabla?.text="Master Yi"
+            celda.lblNombre?.text="Master Yi"
         }else if indexPath.row == 1 {
-            celda.lblTabla?.text="Yasuo"
+            celda.lblNombre?.text="Yasuo"
         }else if indexPath.row == 2 {
-            celda.lblTabla?.text="Teemo"
+            celda.lblNombre?.text="Teemo"
         }else if indexPath.row == 3 {
-            celda.lblTabla?.text="Riven"
+            celda.lblNombre?.text="Riven"
         }else if indexPath.row == 4 {
-            celda.lblTabla?.text="Fiora"
+            celda.lblNombre?.text="Fiora"
         }
-        
         
         return celda
     }
-    
-    
 
     /*
     // MARK: - Navigation
