@@ -16,10 +16,11 @@ class VCPrincipal: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DataHolder.sharedInstance.fireStoreDB?.collection("cities").getDocuments() { (querySnapshot, err) in
+        DataHolder.sharedInstance.fireStoreDB?.collection("cities").addSnapshotListener { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
+                self.arCiudades=[]
                 for document in querySnapshot!.documents {
                     
                     let ciudad:City = City()
