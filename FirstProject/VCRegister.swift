@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class VCRegister: UIViewController {
     
@@ -27,7 +28,15 @@ class VCRegister: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func clickRegistrar(){
+        Auth.auth().createUser(withEmail: (txtEmail?.text)!, password: (txtPassword?.text)!) { (user, error) in
+            if user != nil{
+                print("Registrado")
+            }else{
+                print(error!)
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 

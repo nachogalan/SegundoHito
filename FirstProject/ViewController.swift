@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
        
+        txtUser?.text = DataHolder.sharedInstance.sNickname
+        DataHolder.sharedInstance.sNickname = "galan"
+        txtPassword?.text = DataHolder.sharedInstance.sNickname
         
         // Do any additional setup after loading the view, typically from a nib.
     }
