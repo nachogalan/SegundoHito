@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Aceptar"/>
                                 <connections>
-                                    <segue destination="uOP-fB-7HM" kind="show" id="7Ox-xi-4Gg"/>
+                                    <action selector="clickRegistrar" destination="28r-3v-Zse" eventType="touchUpInside" id="0Bj-ma-7SK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="css-NC-hKF">
@@ -83,6 +83,7 @@
                         <outlet property="txtPassword" destination="fue-ea-8V1" id="EGW-QZ-aPe"/>
                         <outlet property="txtRePassword" destination="0rj-A4-RFq" id="MtD-oM-Jpb"/>
                         <outlet property="txtUser" destination="bcf-N4-zWw" id="1Jh-q7-wR7"/>
+                        <segue destination="uOP-fB-7HM" kind="show" identifier="transitionRegister" id="Jbs-UQ-9pH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYk-Pf-Nu5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -321,6 +322,6 @@
         <image name="lol" width="1568" height="538"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7Ox-xi-4Gg"/>
+        <segue reference="n7X-F5-eg9"/>
     </inferredMetricsTieBreakers>
 </document>

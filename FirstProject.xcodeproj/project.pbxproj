@@ -21,6 +21,7 @@
 		4DE9E9B42063B74C00DF4D96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE9E9B32063B74C00DF4D96 /* Assets.xcassets */; };
 		4DE9E9B72063B74C00DF4D96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE9E9B52063B74C00DF4D96 /* LaunchScreen.storyboard */; };
 		4DE9E9C72063C03600DF4D96 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE9E9C62063C03600DF4D96 /* MapKit.framework */; };
+		4DEE0333207F873900B48FC7 /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE0332207F873900B48FC7 /* Perfil.swift */; };
 		C1A1DB17335D15B7D1F4527C /* Pods_FirstProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E404224B7A85EF80C6DCD /* Pods_FirstProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		4DE9E9B82063B74C00DF4D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DE9E9C12063BFDF00DF4D96 /* FirstProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirstProject.entitlements; sourceTree = "<group>"; };
 		4DE9E9C62063C03600DF4D96 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4DEE0332207F873900B48FC7 /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
 		76B8884A5755AA55088578FD /* Pods-FirstProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstProject/Pods-FirstProject.debug.xcconfig"; sourceTree = "<group>"; };
 		BB8E404224B7A85EF80C6DCD /* Pods_FirstProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3ED7F2B124C45FA6E3B4C15 /* Pods-FirstProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstProject/Pods-FirstProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				4DE9E9B82063B74C00DF4D96 /* Info.plist */,
 				4DE9E9B02063B74C00DF4D96 /* FirstProject.xcdatamodeld */,
 				4D0C2FC02073ACDF004A9586 /* VCRegister.swift */,
+				4DEE0332207F873900B48FC7 /* Perfil.swift */,
 				4D6045FC207522FF0070F2A7 /* VCPrincipal.swift */,
 				4D108C302076404500143415 /* MiCelda1.swift */,
 				4D108C34207648A700143415 /* VCCollectionViewController.swift */,
@@ -226,14 +229,28 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FirstProject/Pods-FirstProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +285,7 @@
 				4D0C2FC12073ACDF004A9586 /* VCRegister.swift in Sources */,
 				4D108C3920764F7100143415 /* MiCelda2.swift in Sources */,
 				4D6045FD207522FF0070F2A7 /* VCPrincipal.swift in Sources */,
+				4DEE0333207F873900B48FC7 /* Perfil.swift in Sources */,
 				4D108C35207648A700143415 /* VCCollectionViewController.swift in Sources */,
 				4DE9E9B22063B74C00DF4D96 /* FirstProject.xcdatamodeld in Sources */,
 				4DE9E9AA2063B74B00DF4D96 /* AppDelegate.swift in Sources */,

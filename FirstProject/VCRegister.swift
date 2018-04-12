@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
 
 class VCRegister: UIViewController {
     
@@ -29,12 +29,24 @@ class VCRegister: UIViewController {
     }
     
     @IBAction func clickRegistrar(){
+        DataHolder.sharedInstance.miPerfil.sNombre = txtUser?.text
+        DataHolder.sharedInstance.miPerfil.iFecha = 1900
+        DataHolder.sharedInstance.miPerfil.sApellido = txtEmail?.text
+        
         Auth.auth().createUser(withEmail: (txtEmail?.text)!, password: (txtPassword?.text)!) { (user, error) in
             if user != nil{
                 print("Registrado")
+                self.performSegue(withIdentifier: "transitionRegister", sender: self)
+          DataHolder.sharedInstance.fireStoreDB?.collection("Perfiles").document((user?.uid)!).setData(DataHolder.sharedInstance.miPerfil.getMap())
+                
+                //[
+//                    "Email":self.txtEmail?.text as Any,
+//                    "Usuario":self.txtUser?.text as Any,
+//                    "Contraseña":self.txtPassword?.text as Any])
             }else{
                 print(error!)
             }
+            print("Hola")
         }
     }
     /*

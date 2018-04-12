@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
 
@@ -17,7 +18,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-       
+        /*
+        do{
+            try Auth.auth().signOut()
+        } catch{
+        
+        }
+ */
+      
+//        Auth.auth().addStateDidChangeListener { (auth, user) in
+//           if user != nil{
+//                self.performSegue(withIdentifier: "transitionLogin", sender: self)
+//            }
+//        }
         txtUser?.text = DataHolder.sharedInstance.sNickname
         DataHolder.sharedInstance.sNickname = "galan"
         txtPassword?.text = DataHolder.sharedInstance.sNickname
@@ -33,9 +46,29 @@ class ViewController: UIViewController {
     @IBAction func clickLoginEvent(){
         print("Hola " + (txtUser?.text)!)
         
-        if txtUser?.text == "nacho" && txtPassword?.text == "galan" {
-            self.performSegue(withIdentifier: "transitionLogin", sender: self)
+        Auth.auth().signIn(withEmail: (txtUser?.text)!, password: (txtPassword?.text)!) { (user, error) in
+            if user != nil{
+                let ruta =
+                DataHolder.sharedInstance.fireStoreDB?.collection("Perfiles").document((user?.uid)!);
+                ruta?.getDocument { (document, error) in
+                    if document != nil {
+                        DataHolder.sharedInstance.miPerfil.setMap(valores: (document?.data())!)
+                     
+                    } else {
+                        print(error!)
+                    }
+                }
+                self.performSegue(withIdentifier: "transitionLogin", sender: self)
+            }
+            else{
+                print("NO SE HA LOGEADO!")
+                print(error!)
+            }
         }
+        
+//        if txtUser?.text == "nacho" && txtPassword?.text == "galan" {
+//            self.performSegue(withIdentifier: "transitionLogin", sender: self)
+//        }
         
     }
     
