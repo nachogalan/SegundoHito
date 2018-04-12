@@ -32,6 +32,8 @@ class VCRegister: UIViewController {
         DataHolder.sharedInstance.miPerfil.sNombre = txtUser?.text
         DataHolder.sharedInstance.miPerfil.iFecha = 1900
         DataHolder.sharedInstance.miPerfil.sApellido = txtEmail?.text
+        if (!((txtEmail?.text?.isEmpty)! || (txtUser?.text?.isEmpty)! || (txtPassword?.text?.isEmpty)! || (txtRePassword?.text?.isEmpty)!)) {
+            if (!((txtPassword?.text?.isEmpty)!)==(txtRePassword?.text?.isEmpty)){
         
         Auth.auth().createUser(withEmail: (txtEmail?.text)!, password: (txtPassword?.text)!) { (user, error) in
             if user != nil{
@@ -48,6 +50,8 @@ class VCRegister: UIViewController {
             }
             print("Hola")
         }
+            }
+    }
     }
     /*
     // MARK: - Navigation
