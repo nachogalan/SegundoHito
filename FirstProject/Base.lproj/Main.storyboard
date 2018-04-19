@@ -221,7 +221,7 @@
         <!--Map-->
         <scene sceneID="x2J-7y-ZjS">
             <objects>
-                <viewController title="Map" id="qyp-8q-SoG" sceneMemberID="viewController">
+                <viewController title="Map" id="qyp-8q-SoG" customClass="VCMapa" customModule="FirstProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1G2-Ez-hXl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,6 +235,9 @@
                         <viewLayoutGuide key="safeArea" id="ik5-gj-zbt"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="gMe-67-8g6"/>
+                    <connections>
+                        <outlet property="miMapa" destination="iNB-ce-4Wa" id="ZNP-Cc-9LH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7a-JI-ozB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

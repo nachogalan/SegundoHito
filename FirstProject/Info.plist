@@ -40,6 +40,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Que te den ijoputa</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Numero de cuenta actualizado</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Contraseña guardada</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Mira el saldo de tu cuenta bro</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

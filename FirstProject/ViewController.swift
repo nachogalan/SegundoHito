@@ -32,7 +32,7 @@ class ViewController: UIViewController {
 //            }
 //        }
         txtUser?.text = DataHolder.sharedInstance.sNickname
-        DataHolder.sharedInstance.sNickname = "galan"
+        DataHolder.sharedInstance.sNickname = "123456"
         txtPassword?.text = DataHolder.sharedInstance.sNickname
         
         // Do any additional setup after loading the view, typically from a nib.

@@ -13,6 +13,8 @@
 		4D108C3920764F7100143415 /* MiCelda2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D108C3820764F7100143415 /* MiCelda2.swift */; };
 		4D1F02B0207CDBA000987E0A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D1F02AF207CDBA000987E0A /* GoogleService-Info.plist */; };
 		4D1F02B2207CE1B000987E0A /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F02B1207CE1B000987E0A /* DataHolder.swift */; };
+		4D29C6302088958000B5204C /* VCMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29C62F2088958000B5204C /* VCMapa.swift */; };
+		4D29C6322088B09000B5204C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29C6312088B09000B5204C /* City.swift */; };
 		4D6045FD207522FF0070F2A7 /* VCPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6045FC207522FF0070F2A7 /* VCPrincipal.swift */; };
 		4DE9E9AA2063B74B00DF4D96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE9E9A92063B74B00DF4D96 /* AppDelegate.swift */; };
 		4DE9E9AC2063B74B00DF4D96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE9E9AB2063B74B00DF4D96 /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 		4D108C3820764F7100143415 /* MiCelda2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiCelda2.swift; sourceTree = "<group>"; };
 		4D1F02AF207CDBA000987E0A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D1F02B1207CE1B000987E0A /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
+		4D29C62F2088958000B5204C /* VCMapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMapa.swift; sourceTree = "<group>"; };
+		4D29C6312088B09000B5204C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		4D6045FC207522FF0070F2A7 /* VCPrincipal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPrincipal.swift; sourceTree = "<group>"; };
 		4DE9E9A62063B74B00DF4D96 /* FirstProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE9E9A92063B74B00DF4D96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				4D108C34207648A700143415 /* VCCollectionViewController.swift */,
 				4D108C3820764F7100143415 /* MiCelda2.swift */,
 				4D1F02B1207CE1B000987E0A /* DataHolder.swift */,
+				4D29C62F2088958000B5204C /* VCMapa.swift */,
+				4D29C6312088B09000B5204C /* City.swift */,
 			);
 			path = FirstProject;
 			sourceTree = "<group>";
@@ -280,7 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D29C6302088958000B5204C /* VCMapa.swift in Sources */,
 				4DE9E9AC2063B74B00DF4D96 /* ViewController.swift in Sources */,
+				4D29C6322088B09000B5204C /* City.swift in Sources */,
 				4D1F02B2207CE1B000987E0A /* DataHolder.swift in Sources */,
 				4D0C2FC12073ACDF004A9586 /* VCRegister.swift in Sources */,
 				4D108C3920764F7100143415 /* MiCelda2.swift in Sources */,
