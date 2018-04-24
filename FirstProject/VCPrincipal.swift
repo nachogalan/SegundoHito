@@ -12,26 +12,26 @@ class VCPrincipal: UIViewController, UITableViewDelegate, UITableViewDataSource 
   
     
     @IBOutlet var tbTablaChamp:UITableView?
-    var arCiudades:[City]=[]
+    var arUsuarios:[Perfil]=[]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DataHolder.sharedInstance.fireStoreDB?.collection("cities").addSnapshotListener { (querySnapshot, err) in
+        DataHolder.sharedInstance.fireStoreDB?.collection("Perfiles").addSnapshotListener { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                self.arCiudades=[]
+                self.arUsuarios=[]
                 for document in querySnapshot!.documents {
                     
-                    let ciudad:City = City()
-                    ciudad.sID=document.documentID
-                    ciudad.setMap(valores: document.data())
-                    self.arCiudades.append(ciudad)
+                    let nombre:Perfil = Perfil()
+                    nombre.setMap(valores: document.data())
+                    self.arUsuarios.append(nombre)
                     
                     print("\(document.documentID) => \(document.data())")
                 }
-                print("------->>>>>> ",self.arCiudades.count)
+                print("------->>>>>> ",self.arUsuarios.count)
                 self.tbTablaChamp?.reloadData()
+               self.refreshUI()
             }
         }
         // Do any additional setup after loading the view.
@@ -44,35 +44,23 @@ class VCPrincipal: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("CONSULTO CANTIDAD DDE FILAS A PINTAR")
-        return self.arCiudades.count
+        return self.arUsuarios.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let celda = tableView.dequeueReusableCell(withIdentifier: "IDmiCelda") as! MiCelda1
-        celda.lblTabla?.text = self.arCiudades[indexPath.row].sName
-        
-        /*
-        if indexPath.row==0 {
-            celda.lblTabla?.text="Master Yi"
-        }
-        else if indexPath.row == 1 {
-            celda.lblTabla?.text="Yasuo"
-        }
-        else if indexPath.row == 2 {
-            celda.lblTabla?.text="Teemo"
-        }
-        else if indexPath.row == 3 {
-            celda.lblTabla?.text="Riven"
-        }
-        else if indexPath.row == 4 {
-            celda.lblTabla?.text="Fiora"
-        }
-     */
-        
+        celda.lblTabla?.text = self.arUsuarios[indexPath.row].sNombre
+        celda.lblEmail?.text = self.arUsuarios[indexPath.row].sApellido
+        celda.mostrarImagen(uri: self.arUsuarios[indexPath.row].sImage!)
         return celda
     }
     
+    func refreshUI() {
+        DispatchQueue.main.async(execute: {
+            self.tbTablaChamp?.reloadData()
+        })
+    }
     
 
     /*

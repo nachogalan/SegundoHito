@@ -13,18 +13,23 @@ class Perfil: NSObject {
     var sNombre:String?
     var iFecha:Int?
     var sApellido:String?
+    var sImage:String?
+    
     
     func setMap(valores:[String:Any]){
         sNombre = valores ["nombre"] as? String
         sApellido = valores ["apellido"] as? String
         iFecha = valores ["nacimiento"] as? Int
+        sImage = valores ["image"] as? String
     }
     
     func getMap() -> [String:Any]{
         return [
             "nombre": sNombre as Any,
             "apellido": sApellido as Any,
-            "fecha": iFecha as Any
+            "nacimiento": iFecha as Any,
+            "image": sImage as Any
+            
         ]
     }
 
