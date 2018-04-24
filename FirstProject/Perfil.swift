@@ -14,6 +14,8 @@ class Perfil: NSObject {
     var iFecha:Int?
     var sApellido:String?
     var sImage:String?
+    var iLatitude:Double?
+    var iLongitude:Double?
     
     
     func setMap(valores:[String:Any]){
@@ -21,6 +23,8 @@ class Perfil: NSObject {
         sApellido = valores ["apellido"] as? String
         iFecha = valores ["nacimiento"] as? Int
         sImage = valores ["image"] as? String
+        iLatitude = valores ["latitud"] as? Double
+        iLongitude = valores ["longitud"] as? Double
     }
     
     func getMap() -> [String:Any]{
@@ -28,7 +32,9 @@ class Perfil: NSObject {
             "nombre": sNombre as Any,
             "apellido": sApellido as Any,
             "nacimiento": iFecha as Any,
-            "image": sImage as Any
+            "image": sImage as Any,
+            "latitud": iLatitude as Any,
+            "nacimiento": iLongitude as Any
             
         ]
     }

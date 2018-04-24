@@ -16,7 +16,11 @@ class VCMapa: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.agregarPin(titulo: "PrimerPunto", latitude: 42, longitude: -3)
+   for Perfil in DataHolder.sharedInstance.arUsuarios {
+          if Perfil.iLatitude != nil {
+            self.agregarPin(titulo: Perfil.sNombre!, latitude: Perfil.iLatitude!, longitude: Perfil.iLongitude!)
+           }
+      }
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.requestAlwaysAuthorization()

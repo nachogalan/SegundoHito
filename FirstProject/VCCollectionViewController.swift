@@ -12,7 +12,7 @@ class VCCollectionViewController: UIViewController, UICollectionViewDelegate, UI
     
     
     @IBOutlet var colPrincipal:UICollectionView?
-    var arUsuarios:[Perfil]=[]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,16 +20,16 @@ class VCCollectionViewController: UIViewController, UICollectionViewDelegate, UI
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                self.arUsuarios=[]
+                DataHolder.sharedInstance.arUsuarios=[]
                 for document in querySnapshot!.documents {
                     
                     let nombre:Perfil = Perfil()
                     nombre.setMap(valores: document.data())
-                    self.arUsuarios.append(nombre)
+                    DataHolder.sharedInstance.arUsuarios.append(nombre)
                     
                     print("\(document.documentID) => \(document.data())")
                 }
-                print("------->>>>>> ",self.arUsuarios.count)
+                print("------->>>>>> ",DataHolder.sharedInstance.arUsuarios.count)
                 self.colPrincipal?.reloadData()
                 self.refreshUI()
             }
@@ -44,13 +44,13 @@ class VCCollectionViewController: UIViewController, UICollectionViewDelegate, UI
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print("CONSULTO CANTIDAD DDE FILAS A PINTAR")
-        return self.arUsuarios.count
+        return DataHolder.sharedInstance.arUsuarios.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let celda = collectionView.dequeueReusableCell(withReuseIdentifier: "IDmiCelda1", for: indexPath) as! MiCelda2
-        celda.lblNombre?.text = self.arUsuarios[indexPath.row].sNombre
+        celda.lblNombre?.text = DataHolder.sharedInstance.arUsuarios[indexPath.row].sNombre
         return celda
     }
     

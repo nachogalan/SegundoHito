@@ -18,6 +18,7 @@ class DataHolder: NSObject {
     var fireStoreDB:Firestore?
     var miPerfil:Perfil = Perfil()
     var firStorage:Storage?
+    var arUsuarios:[Perfil] = []
     var sNickname:String = "QWERTY@gmail.com"
     
     func initFireBase(){
